@@ -1,17 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
+
 <head>
     <meta charset="UTF-8">
     <title>Effective JavaScript: Frogger</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div id='scoreboard'></div>
-  <div class='container'>
+    <div id='starter'>
+        <div class='intro'>Welcome to my Frogger Clone Game!</div>
+        <div id='nameIntro'>
+            <div class='openText'>What should we call you?</div>
+            <form id='nameForm'>
+                <input id='fillName' type='text' value='Guest'>
+
+                <div class='openText'>What difficulty did you want to play!?</div>
+                <div class='buttons'>
+                  <input type='button' value=Easy id='easy'>
+                  <input type='button' value=Medium id='medium'>
+                  <input type='button' value=Hard id='hard'>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class='container'>
+        <div id='menu'>
+            <div id='customName'><span class='name'></span>, you have earned <span class='scoreboard'></span>
+                points! but you only have <span id='livesLeft'></span> lives left.</div>
+        </div>
+    </div>
+    <div class='endContainer'>
+        <div id='endGame'>
+            <span class='name'></span> has died! with <span class='scoreboard'></span> points!
+            <br>
+            <button id='restart' type="button" value="Restart" onClick="window.location.reload()">Restart</button>
+            <button id='replay' type="button" value="Replay">Replay</button>
+        </div>
+    </div>
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="js/resources.js"></script>
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>
-  </div>
+
 </body>
+
 </html>
