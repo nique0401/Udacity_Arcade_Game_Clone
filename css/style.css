@@ -1,3 +1,102 @@
 body {
-    text-align: center;
+     text-align: center;
+     background: lightblue;
+     display:block;
+     cursor: default;
+}
+ .starter{
+     width:750px;
+     height:750px;
+     text-align: center;
+     display:block;
+}
+ #menu{
+     width:750px;
+     height:80px;
+     text-align: center;
+     border-radius: 8px;
+     font-size: 20px;
+     background: green;
+     display:none;
+}
+ .container, #endContainer{
+     display: flex;
+     width:750px;
+     text-align: center;
+     margin: 0 auto;
+}
+ .intro{
+     text-align: center;
+     font-size: 42px;
+     margin: 15px;
+     margin-top: 60px;
+}
+ .buttons{
+     margin:15px;
+}
+ .openText{
+     margin-top:75px;
+     font-size: 30px;
+}
+ #fillName {
+     height: 35px;
+     width:200px;
+     font-size: 20px;
+     text-align: center;
+     margin: 15px;
+}
+ #easy, #medium, #hard {
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     border-radius: 8px;
+     font-size: 20px;
+     padding: 12px 28px;
+     text-align: center;
+     cursor: pointer;
+}
+ #easy {
+     background-color: #4CAF50;
+}
+/* Green */
+ #medium {
+     background-color: #008CBA;
+}
+/* Blue */
+ #hard {
+     background-color: #f44336;
+}
+/* Red */
+ input{
+     cursor: pointer;
+}
+ .name, .scoreboard, #livesLeft{
+     font-size: 30px;
+     color:white;
+     font-weight: bold;
+}
+ #customName{
+     font-size: 25px;
+     color:white;
+}
+ #restart, #replay {
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     border-radius: 8px;
+     font-size: 20px;
+     text-align: center;
+     cursor: pointer;
+     width:100px;
+     height:40px;
+     display: none;
+}
+ #restart{
+     background-color: #f44336;
+}
+ #replay{
+     background-color: green;
+}
+ #endGame{
+     width:100%;
+     height:80px;
+     text-align: center;
+     display:none;
+     font-size: 30px;
 }
