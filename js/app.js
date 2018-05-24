@@ -142,10 +142,8 @@ function randomLocation(min,max) {
 
 function winGame() {
   if (player.y < 0) {
-    console.log(score);
     player.x=200;
     player.y=400;
-    console.log(score);
     if ((score/100) % 3 === 0){
       allEnemies.push(new Enemy(randomLocation(-500,-100), 60));
     }
@@ -156,7 +154,7 @@ function winGame() {
       allEnemies.push(new Enemy(randomLocation(-500,-100), 230));
     }
     //
-    console.log(score);
-        score = score + 100;
+    score = score + 100;
+    $('#scoreboard').text(score);
   }
 }
