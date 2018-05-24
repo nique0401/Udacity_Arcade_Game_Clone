@@ -60,7 +60,7 @@ Enemy.prototype.update = function(dt) {
       }
 };
 Enemy.prototype.reset = function(){
-    this.x = this.argument1;
+    this.x = randomLocation(-400,-100);
     this.y = this.argument2;
 };
 
@@ -105,14 +105,12 @@ var showResult = function(){
 
 // Now instantiate your objects.
 let player = new Player(200, 400);
-let enemy1 = new Enemy(-400, 230);
-let enemy2 = new Enemy(-650, 145);
-let enemy3 = new Enemy(-780, 60);
-let enemy4 = new Enemy(-80, 230);
-let enemy5 = new Enemy(-1000, 145);
-let enemy6 = new Enemy(-450, 60);
+let enemy1 = new Enemy(-200, 230);
+let enemy2 = new Enemy(-150, 145);
+let enemy3 = new Enemy(-380, 60);
 
-allEnemies.push(enemy1,enemy2,enemy3,enemy4,enemy5,enemy6);
+
+allEnemies.push(enemy1,enemy2,enemy3);
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
@@ -130,3 +128,7 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
+function randomLocation(min,max) {
+  return Math.random() * (max-min) +min;
+}
