@@ -1,5 +1,5 @@
 let lives;
-let points;
+let score = 0;
 let level = 'easy';
 let character= 'char-boy.png';
 let allEnemies = [];
@@ -79,6 +79,7 @@ var Player = function(x, y) {
 };
 Player.prototype.update = function(){
     //changes, handles and displays the score
+winGame()
 
 };
 Player.prototype.render = function(){
@@ -105,9 +106,9 @@ var showResult = function(){
 
 // Now instantiate your objects.
 let player = new Player(200, 400);
-let enemy1 = new Enemy(-200, 230);
+let enemy1 = new Enemy(-300, 230);
 let enemy2 = new Enemy(-150, 145);
-let enemy3 = new Enemy(-380, 60);
+let enemy3 = new Enemy(-480, 60);
 
 
 allEnemies.push(enemy1,enemy2,enemy3);
@@ -128,7 +129,34 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+// Prevent the up and down arrow keys from scrolling the browser window
+window.addEventListener('keydown', function(e) {
+    if (e.keyCode === 38 || e.keyCode === 40) {
+        e.preventDefault();
+    }
+});
 
 function randomLocation(min,max) {
   return Math.random() * (max-min) +min;
+}
+
+function winGame() {
+  if (player.y < 0) {
+    console.log(score);
+    player.x=200;
+    player.y=400;
+    console.log(score);
+    if ((score/100) % 3 === 0){
+      allEnemies.push(new Enemy(randomLocation(-500,-100), 60));
+    }
+    if ((score/100) % 4 === 0){
+      allEnemies.push(new Enemy(randomLocation(-500,-100), 145));
+    }
+    if ((score/100) % 5 === 0){
+      allEnemies.push(new Enemy(randomLocation(-500,-100), 230));
+    }
+    //
+    console.log(score);
+        score = score + 100;
+  }
 }
