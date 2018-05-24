@@ -1,23 +1,45 @@
-Udacity Frontend NanoDegree Classic Arcade Game Clone!
-by Dominique Schaefer
-made for Udacity Frontend NanoDegree
+# Udacity Arcade Game Clone
 
-HOW TO START THE GAME:
-To start playing my game you need to go to: https://github.com/nique0401/Udacity_Arcade_Game_Clone
+A clone of the classic Frogger game, where you will use your character to cross the stone into the water.
 
-Save all files and unzip into same folder, open Index.html and you can proceed to set up your game by typing in your name in the provided box.  then choose a difficulty you want to play.  Each difficulty has progressively faster enemies to pass. Once you select a difficulty the game will automatically start!
+## Getting Started
 
-HOW TO PLAY?
-you start the game with 3 lives and 0 points, every time you cross the stones,
-and jump into the water, you earn 100 points. But watch out! if a bug catches you
-on the way to the water, you lose a life and start at the beginning, and at 0 lives, your game is over!
+### Installing
 
-HOW DO I WIN?
-This game is never ending! every time you jump in the water, the bugs multiply!
-and the next time you run to the water there will be even more bugs trying to stop
-you!  Gain as many points as you can, and try to avoid the ever growing mob of
-bugs, to get your High score!
+To install this project, you will download from the following site:
+https://github.com/nique0401/Udacity_Arcade_Game_Clone
 
-Base files of Engine.js, resources.js and app.js were provided by Udacity at:https://github.com/udacity/frontend-nanodegree-arcade-game/tree/master/js
+After you download the file, you will unzip it into the same folder, and run the Index.html
 
-Used ideas from Andrew Salcedo to complete some of the engine.js edits needed to create my starting page: https://github.com/andrwsalcdo/udacity-arcade-game
+
+## How to play:
+
+This is a very simple game in which your end goal is to cross the stone paths, into the water as many times as possible
+
+### How do I move!?
+
+This game is controlled with the arrow keys, it will move you one block in any direction, forward, left, right or backwards.
+
+### How do I earn points?
+
+Every time you cross and jump into the river without being killed, you will earn 100 points! But, the bugs are smart creatures, each time you cross more bugs will spawn!
+
+## Built With
+
+•	Html
+•	CSS
+•	JavaScript
+•	JQuery
+
+
+## Authors
+
+* **Dominique Schaefer**
+
+
+## Acknowledgments
+
+•	Base files of Engine.js, resources.js and app.js were provided by Udacity at:
+o	https://github.com/udacity/frontend-nanodegree-arcade-game/tree/master/jsInspiration
+•	Used ideas from Andrew Salcedo to complete some of the engine.js edits needed to create my starting page:
+o	https://github.com/andrwsalcdo/udacity-arcade-game
