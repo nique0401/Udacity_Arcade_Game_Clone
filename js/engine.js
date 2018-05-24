@@ -103,6 +103,8 @@ var Engine = (function(global) {
      * they are just drawing the entire screen over and over.
      */
     function render() {
+      if(play == true){
+
         /* This array holds the relative URL to the image used
          * for that particular row of the game level.
          */
@@ -125,7 +127,8 @@ var Engine = (function(global) {
          * and, using the rowImages array, draw the correct image for that
          * portion of the "grid"
          */
-        for (row = 0; row < numRows; row++) {
+
+          for (row = 0; row < numRows; row++) {
             for (col = 0; col < numCols; col++) {
                 /* The drawImage function of the canvas' context element
                  * requires 3 parameters: the image to draw, the x coordinate
@@ -139,6 +142,14 @@ var Engine = (function(global) {
         }
 
         renderEntities();
+      }
+      else (
+        startScreen()
+      )
+    }
+    function startScreen(){
+      $('.container').hidden = true;
+
     }
 
     /* This function is called by the render function and is called on each game
